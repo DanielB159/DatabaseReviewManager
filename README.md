@@ -10,7 +10,12 @@ It adds two tables to the initial database:
 ## Structure
 The program is split to two files.
 *DatabaseInteract.py* - containing the *DatabaseInteract* class, a class designed to handle all of the transactions with the database
-*main.py* - containing the main function. It connects to the MYSQL server and uses the *DatabaseInteract* class to handle all of the transactions with the database.
+*main.py* - containing the main function. It connects to the MYSQL server and uses the *DatabaseInteract* class to handle all of the transactions with the database.  
+python libraries used in this program:  
+- *mysql.connector*
+- *os*
+- *dotenv*
+- *prettytable*
 
 ## Using the program
 The program is run in the command line with the `python main.py` command.

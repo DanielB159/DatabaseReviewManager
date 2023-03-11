@@ -9,8 +9,6 @@ class DatabaseInteract:
         #setting the fields of the DatabaseInteract Object
         self.cnx = cnx
         self.cursor = cnx.cursor()
-        #setting the cursor to enable prepared statements.
-        self.cursor = cnx.cursor(prepared=True)
     
     # this method will check weather a table exists
     def check_if_table_exists(self, table_name):
@@ -190,7 +188,6 @@ class DatabaseInteract:
         if film_choice_tuple is not None:
             #if there are more results, fetching all of them
             dummy = self.cursor.fetchall()
-            print("the tuple we are currently working with:", film_choice_tuple)
             new_film_id = self.assertSingleMovieChoice(film_name)
             # running check weather review exists
             self.cursor.execute(query_select_film, [new_film_id, ID])
